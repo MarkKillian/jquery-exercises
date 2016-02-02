@@ -51,7 +51,22 @@
     <script>
       // Pro tip: Always write your code inside of the document's ready function
       $(document).ready(function(){
-        // Write your code here
+        $("form.new-item").on("submit", function(event){
+          event.preventDefault();
+          var $form = $("form.new-item");
+          var $name = $(".name", $form);
+          var value = $name.val();
+          $name.val = ("My New Value");
+          var $price = $(".price",$form);
+          var value = $price.val();
+          $name.val = ("My New Value");
+          $(".items").append(".item");
+          var newDiv = $('<div/>');
+          var logoText = $('<span/>').text('Copycat');
+          newDiv.append(logoText);
+          $('.items').append(newDiv);
+        });
+
       });
     </script>
   </body>

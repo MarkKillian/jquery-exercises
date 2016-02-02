@@ -28,7 +28,15 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
       $(document).ready(function(){
-        // Write your code here
+        $('.btn.fadeIn').click(function(){
+          $('.box').fadeIn("slow");
+        });
+        $('.btn.fadeOut').click(function(){
+          $('.box').fadeOut("slow");
+        });
+        $('.btn.fadeInOut').click(function(){
+          $('.box').fadeToggle("slow");
+        });
       });
     </script>
   </body>
