@@ -28,14 +28,24 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
       $(document).ready(function(){
-        $('.btn.fadeIn').click(function(){
-          $('.box').fadeIn("slow");
-        });
-        $('.btn.fadeOut').click(function(){
-          $('.box').fadeOut("slow");
-        });
-        $('.btn.fadeInOut').click(function(){
-          $('.box').fadeToggle("slow");
+      //   $('.btn.fadeIn').click(function(){
+      //     $('.box').fadeIn("slow");
+      //   });
+      //   $('.btn.fadeOut').click(function(){
+      //     $('.box').fadeOut("slow");
+      //   });
+      //   $('.btn.fadeInOut').click(function(){
+      //     $('.box').fadeToggle("slow");
+      //   });
+
+        $(".btn").on("click", function(){
+          if($(this).hasClass("fadeIn")){
+            $(".box").fadeIn("slow");
+          } else if($(this).hasClass("fadeOut")){
+            $(".box").fadeOut("slow");
+          } else {
+            $(".box").fadeIn().fadeOut();
+          }
         });
       });
     </script>
